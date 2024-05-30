@@ -1,0 +1,44 @@
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: antiquewhite;
+    padding: 10px 0;
+
+    .headerGroup {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    
+        .links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+    
+            .path {
+                color: black;
+                font-weight: 500;
+                text-decoration: none;
+            }
+    
+            .path:hover {
+                text-decoration: underline;
+    
+            }
+        }
+    }
+
+    .active {
+        text-decoration: underline;
+        color: red;
+        font-weight: 500;
+    }
+}
