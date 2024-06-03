@@ -1,0 +1,82 @@
+.mainContent {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    max-height: 638px;
+    height: 100%;
+    overflow: auto;
+
+
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        table {
+            width: 100%;
+            text-align: center;
+
+            tbody {
+                margin-top: 10px;
+            }
+
+            td:last-child {
+                min-width: 150px;
+    
+                .actions {
+                    display: flex;
+                    justify-content: space-between;
+    
+                    .linkBtn {
+                        color: white;
+                    }
+    
+                    button {
+                        background-color: red;
+                        color: fff;
+                    }
+                }
+            }
+        }
+
+        form {
+            .formGroup {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 10px;
+
+                label {
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                }
+
+                input, textarea {
+                    padding: 7px 10px;
+                    border-radius: 5px;
+                    outline: none;
+                    border: none;
+                    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                }
+
+                input:focus, textarea:focus {
+                    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1) inset;
+                }
+            }
+        }
+    }
+}
+
+.mainContent::-webkit-scrollbar {
+    width: 5px;
+    // padding: 10px;
+}
+
+.mainContent::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Màu nền của thanh cuộn */
+    border-radius: 10px;
+    /* Bo tròn các góc của thanh cuộn */
+}

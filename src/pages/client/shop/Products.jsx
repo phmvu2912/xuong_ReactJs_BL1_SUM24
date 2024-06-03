@@ -19,9 +19,9 @@ const Products = ({ products }) => {
               <b>{item.title}</b>
 
               <div className={styles.prices}>
-                <p>$110</p>
+                <p>${(item.price / item.discountPercentage).toFixed(2)}</p>
 
-                <del>$200</del>
+                <del>${item.price}</del>
               </div>
             </div>
 

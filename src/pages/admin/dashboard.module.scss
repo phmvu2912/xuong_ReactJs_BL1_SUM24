@@ -1,0 +1,98 @@
+.content {
+    display: flex;
+    gap: 15px;
+
+    .contentLeft {
+        width: 70%;
+
+        .statistics {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                padding: 10px;
+                border-radius: 10px;
+                background-color: #fff;
+                min-height: 200px;
+                box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+
+                .data {
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 10px;
+                    background-color: rgb(211, 210, 210);
+                    height: 100%;
+                }
+
+            }
+        }
+
+        .banner {
+            background-color: bisque;
+            padding: 20px 10px;
+            border-radius: 10px;
+            font-size: 18px;
+            text-align: center
+        }
+
+        .mainContent {
+            height: 340px;
+            max-height: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            overflow-y: auto;
+            text-align: justify;
+        }
+
+        .mainContent::-webkit-scrollbar {
+            width: 5px;
+            // padding: 10px;
+        }
+
+        .mainContent::-webkit-scrollbar-thumb {
+            background-color: #888;
+            /* Màu nền của thanh cuộn */
+            border-radius: 10px;
+            /* Bo tròn các góc của thanh cuộn */
+        }
+    }
+
+    .contentRight {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            min-height: 200px;
+            box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+            margin-bottom: 15px;
+        }
+
+        .bot {
+            display: flex;
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            // height: 100%;
+            box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+            margin-bottom: 15px;
+
+        }
+    }
+
+
+}

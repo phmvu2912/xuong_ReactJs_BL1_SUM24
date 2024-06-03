@@ -1,0 +1,23 @@
+.bodyContent {
+    background-color: rgb(208, 208, 208);
+}   
+
+.admin {
+    padding: 15px;
+
+    .groupContent {
+        display: flex;
+        align-items: stretch;
+        height: 100%;
+        gap: 15px;
+
+        .contentLeft {
+            // background-color: red;
+        }
+
+        .contentRight {
+            flex: 1;
+            // background-color: blue;
+        }
+    }
+}
