@@ -3,6 +3,9 @@ import styles from './header.module.scss'
 import { Link, NavLink } from 'react-router-dom'
 
 const HeaderClient = () => {
+
+    
+
     return (
         <>
             <header>
@@ -29,8 +32,8 @@ const HeaderClient = () => {
                             </ul>
                         </div>
 
-                        <div className="actions">
-                            <Link to='login'>Đăng nhập</Link>
+                        <div className={styles.actions}>
+                            {}<Link to='login' className={styles.path} >Tài khoản</Link>
                         </div>
                     </div>
                 </div>

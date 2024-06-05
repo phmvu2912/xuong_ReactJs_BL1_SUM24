@@ -1,0 +1,106 @@
+// .divider:after,
+// .divider:before {
+//     content: "";
+//     flex: 1;
+//     height: 1px;
+//     background: #eee;
+// }
+
+// .h-custom {
+//     height: calc(100% - 73px);
+// }
+
+// @media (max-width: 450px) {
+//     .h-custom {
+//         height: 100%;
+//     }
+// }
+
+.center {
+    margin: 100px auto;
+
+    .authForm {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left,
+        .right {
+            flex: 1;
+
+        }
+
+        .left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+
+            .heading {
+                font-size: 26px;
+                font-weight: 700;
+                text-align: center;
+            }
+
+            .content {
+
+                .formGroup {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+                    margin: 10px 0;
+
+                    label {
+                        font-weight: 500;
+                        margin-bottom: 5px;
+                    }
+
+                    input {
+                        outline: none;
+                        padding: 7px 10px;
+                        border-radius: 5px;
+                    }
+
+                    #showPassword {
+                        flex: 0;
+                        justify-content: end;
+                    }
+
+                    button {
+                        padding: 10px 0;
+                        border-radius: 7px;
+                        transition: 0.4s ease-in-out;
+                        background-color: #faebd7;
+                        font-weight: 500;
+                    }
+
+                    button:hover {
+                        background-color: gray;
+
+                        color: white;
+                    }
+
+                    p {
+                        color: blue;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+
+                .showPassword {
+                    display: flex;
+                    justify-content: end;
+                    border: none;
+                    background-color: none;
+                }
+
+            }
+        }
+
+
+    }
+}
