@@ -107,8 +107,8 @@ function App() {
 
                 {/* Layout Admin */}
                 <Route path='admin' element={<PrivateRoute />} >
-                    <Route index element={<LayoutAdmin />} />
-                    <Route path='admin' element={<Dashboard products={products} />} />
+                    <Route element={<LayoutAdmin />} />
+                    <Route index element={<Dashboard products={products} />} />
                     <Route path='products' element={<ProductsAdminPage products={products} onRemove={handleRemove} />} />
                     <Route path='products-submit' element={<ProductForm onHandIn={handleSubmit} />} />
                     <Route path='products-submit/edit/:id' element={<ProductForm onHandIn={handleSubmit} />} />

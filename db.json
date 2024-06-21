@@ -524,11 +524,15 @@
       "username": "phmvu",
       "id": 10
     },
-    
     {
       "email": "admin@gmail.com",
       "password": "$2a$10$JI5scBsGl48gFSjlTKyMQOk8LfaQ4V6TNpAHjfOkxwrXoeeQtlAKK",
       "id": 1
+    },
+    {
+      "email": "vupdph34756@gmail.com",
+      "password": "$2a$10$sMlXHXX3Z/gVih2k7fNineEhU4fnqs8oewlXfjUGm68psdmiqq83G",
+      "id": 11
     }
   ]
 }

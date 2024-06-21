@@ -51,7 +51,8 @@ const HeaderClient = () => {
                         </div>
                         <div className={styles.itemsRight}>
                             <div className={styles.actions}>
-                                <Link to="/login">Login</Link>
+                                {user ? <b className={styles.logout} onClick={() => handleLogout()}>Logout</b> : <Link to="/login">Login</Link>}
+                                
                                 <button>Book a demo</button>
                             </div>
                         </div>
