@@ -522,47 +522,13 @@
       "email": "phmvu2912@gmail.com",
       "password": "$2a$10$LA4TuxmP6rMHH41mo3VM8Ogah16XAcXvGiuMaQ9PV8F/P8.z8f5PO",
       "username": "phmvu",
+      "id": 10
+    },
+    
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$JI5scBsGl48gFSjlTKyMQOk8LfaQ4V6TNpAHjfOkxwrXoeeQtlAKK",
       "id": 1
-    },
-    {
-      "email": "vupdph34756@fpt.edu.vn",
-      "password": "$2a$10$0ZuCdSautQ7WmTUC4xtda.5HjlDlUyArHKN29oDEoSu2uBJe4oY4q",
-      "username": "viking110i",
-      "id": 2
-    },
-    {
-      "email": "abc@gmail.com",
-      "password": "$2a$10$RkzyhNwHhbhfYTs/9KCl1u3eeMtAohkTFx7NQTkeOVxHHjqF67/72",
-      "username": "Vũ abc",
-      "id": 3
-    },
-    {
-      "email": "abcdeg@gmail.com",
-      "password": "$2a$10$/lQISso0SBWxSBMUFykZAO64AA/dtK5Vpwiq8O6NTIos4D2ZzlYV6",
-      "username": "Vũ abc",
-      "id": 4
-    },
-    {
-      "email": "12345@gmail.com",
-      "password": "$2a$10$g3oTFJ/jOOsqWPXXcR8O9uXFtp9ytXch8DNH1bz6dd/nx9fbfaoXe",
-      "username": "phmvu2912",
-      "id": 5
-    },
-    {
-      "email": "pdv2912@gmail.com",
-      "password": "$2a$10$HViTV6CrCgFz7N5AfW/VWutXEJqh4Bbmg4WfcpQeWzMaRhdZRllHC",
-      "id": 6
-    },
-    {
-      "email": "pdv@gmail.com",
-      "password": "$2a$10$N/F7Z2wEPCMp8hvJkaArHu6Ru1NXmxXN8iLnO39AQp1D/yhkZvrBW",
-      "username": "pdv2912",
-      "id": 7
-    },
-    {
-      "email": "vu@gmail.com",
-      "password": "$2a$10$MBbu93yH5/mSSaJh3koLCuw1ha7BSzunAYjGxh7r3kAExrU5JIHCS",
-      "id": 8
     }
   ]
 }

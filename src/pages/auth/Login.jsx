@@ -21,9 +21,9 @@ const Login = () => {
 
             const { data } = await instance.post('login', user);
 
-            // console.log(data)
+            console.log(data)
 
-            localStorage.setItem('accessToken', data.accessToken)
+            localStorage.setItem('user', JSON.stringify(data))
 
             alert('Đăng nhập thành công!');
             navigate('/');

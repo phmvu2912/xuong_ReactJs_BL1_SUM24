@@ -15,6 +15,7 @@ import HomePage from './pages/client/HomePage'
 import DetailProduct from './pages/client/shop/DetailProduct'
 import Products from './pages/client/shop/Products'
 import instance, { getProduct } from './services/axios'
+import PrivateRoute from './components/PrivateRoute'
 
 
 function App() {
@@ -105,14 +106,16 @@ function App() {
                 </Route>
 
                 {/* Layout Admin */}
-                <Route path='admin' element={<LayoutAdmin />} >
-                    <Route index element={<Dashboard products={products} />} />
+                <Route path='admin' element={<PrivateRoute />} >
+                    <Route index element={<LayoutAdmin />} />
+                    <Route path='admin' element={<Dashboard products={products} />} />
                     <Route path='products' element={<ProductsAdminPage products={products} onRemove={handleRemove} />} />
                     <Route path='products-submit' element={<ProductForm onHandIn={handleSubmit} />} />
                     <Route path='products-submit/edit/:id' element={<ProductForm onHandIn={handleSubmit} />} />
                     <Route path='about' element={<AboutPage />} />
                     <Route path='contact' element={<ContactPage />} />
                 </Route>
+
 
                 {/* Auth */}
                 <Route path='login' element={<Login />} />

@@ -1,57 +1,77 @@
-ul,
-li {
-    margin: 0;
-    padding: 0;
-}
+@import "../../../reset";
 
 header {
-    background-color: antiquewhite;
-    padding: 10px 0;
-
-    .headerGroup {
+    padding: 15px 0;
+    margin: 0;
+    
+    .headerGroup,
+    .itemsLeft {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+    }
 
-
-        .links {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            gap: 30px;
-
-            .path {
-                color: black;
-                font-weight: 500;
-                text-decoration: none;
-            }
-
-            .path:hover {
-                text-decoration: underline;
-
-            }
+    .itemsLeft {
+        nav {
+            margin-left: 70px;
         }
 
-        .actions {
-            .path {
-                color: black;
-                font-weight: 500;
-                text-decoration: none;
-            }
+        ul {
+            display: flex;
+            row-gap: 18px;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+        }
 
-            .path:hover {
-                text-decoration: underline;
+        li {
+            /* padding: 0 18px; */
+            /* margin: 0 18px; */
+        }
 
-            }
+        .path {
+            text-decoration: none;
+            color: black;
+            padding: 20px;
+            font-weight: 500;
+        }
+
+        .path:hover {
+            color: #018294;
+        }
+
+        .active {
+            color: #018294;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 20px;
         }
     }
 
-    .active {
-        text-decoration: underline;
-        color: red;
-        font-weight: 500;
+    .itemsRight {
+        .actions {
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            button {
+                min-width: 156px;
+                background-color: transparent;
+                height: 54px;
+                border: none;
+                border-radius: 40px;
+                transition: 0.4s ease-in-out;
+                margin-left: 28px;
+
+                &:hover {
+                    background-color: #2D2D2D;
+                    color: white;
+                    border: 0px, 1px, 1px, 0px;
+
+                }
+            }
+
+        }
     }
 }
