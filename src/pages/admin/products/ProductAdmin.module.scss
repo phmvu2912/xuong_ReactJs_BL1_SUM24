@@ -17,7 +17,7 @@
     .content {
         table {
             width: 100%;
-            text-align: center;
+            // text-align: center;
 
             tbody {
                 margin-top: 10px;
@@ -39,6 +39,10 @@
                         color: fff;
                     }
                 }
+            }
+
+            .description {
+                text-align: justify;
             }
         }
 

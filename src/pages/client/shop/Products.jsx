@@ -1,13 +1,15 @@
-import React from 'react'
-import styles from '../shop/product.module.scss'
 import { Link } from 'react-router-dom'
-import fav from '../../../assets/images/icon-fav.png'
 import star from '../../../assets/images/icon-star.png'
+import styles from '../shop/product.module.scss'
+import { useContext } from 'react'
+import { ProductContext } from '../../../contexts/ProductContext'
 
 
-const Products = ({ products }) => {
+const Products = () => {
 
-    // console.log(products);
+    const { state, dispatch } = useContext(ProductContext)
+
+    console.log(state);
 
     return (
         <>
@@ -32,7 +34,7 @@ const Products = ({ products }) => {
             </div>
 
             <div className={styles.content}>
-                {products?.map((item, index) => (
+                {state.products.map((item, index) => (
                     <div className={styles.card} key={item.id}>
                         <div className={styles.img}>
                             <img src={item.thumbnail} alt={item.title} />

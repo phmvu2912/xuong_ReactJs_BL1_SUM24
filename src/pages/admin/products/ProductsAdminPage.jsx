@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './ProductAdmin.module.scss'
 import { Link } from 'react-router-dom'
+import { ProductContext } from '../../../contexts/ProductContext'
+import instance from '../../../services/axios'
 
 
-const ProductsAdminPage = ({ products, onRemove }) => {
+const ProductsAdminPage = () => {
+
+  const { state, dispatch } = useContext(ProductContext)
+
+  const handleRemove = async (id) => {
+    try {
+      if (confirm('Bạn có muốn xóa bản ghi này không?')) {
+        await instance.delete(`products/${id}`);
+
+        dispatch({ type: 'REMOVE_PRODUCTS', payload: id })
+        
+        alert('Xóa thành công!')
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <>
       <div className={styles.mainContent}>
@@ -27,18 +46,18 @@ const ProductsAdminPage = ({ products, onRemove }) => {
             </thead>
 
             <tbody>
-              {products?.map((item, index) => (
+              {state.products.map((item, index) => (
                 <tr key={index}>
                   <td className='fw-bold'>{index + 1}</td>
                   <td>{item.title}</td>
                   <td>
-                    <img src={item.thumbnail} alt={item.title} width={'200px'}/>
+                    <img src={item.thumbnail} alt={item.title} width={'200px'} />
                   </td>
                   <td>{item.price}</td>
                   <td>{item.description}</td>
                   <td className={styles.actions}>
                     <Link className='btn btn-primary btn-sm my-2' to={`/admin/products-submit/edit/${item.id}`}>Cập nhật</Link>
-                    <button type='button' className='btn btn-danger btn-sm mx-1 w-50' onClick={() => onRemove(item.id)}>Xóa</button>
+                    <button type='button' className='btn btn-danger btn-sm mx-1 w-50' onClick={() => handleRemove(item.id)}>Xóa</button>
                   </td>
                 </tr>
               ))}

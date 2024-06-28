@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './dashboard.module.scss'
+import { ProductContext } from '../../contexts/ProductContext'
 
-const Dashboard = ({ products }) => {
+const Dashboard = () => {
+
+    const { state, dispatch } = useContext(ProductContext)
+
 
     // console.log(products)
-    const totalRecords = products.length
+    const totalRecords = state.products.length
 
     let now = new Date();
 

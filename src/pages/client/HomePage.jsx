@@ -3,9 +3,11 @@ import styles from './homepage.module.scss'
 import icon1 from '../../assets/images/Icon.png';
 import icon2 from '../../assets/images/Icon-1.png';
 import icon3 from '../../assets/images/Icon-2.png';
+import { ProductContext } from '../../contexts/ProductContext';
 
 
 const HomePage = () => {
+  
   return (
     <>
       <div className={styles.handleGrid}>

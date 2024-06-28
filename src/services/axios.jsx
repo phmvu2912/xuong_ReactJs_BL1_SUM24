@@ -9,7 +9,7 @@ const instance = axios.create({
 });
 
 export const getProduct = async () => {
-    const {data} = await instance.get('products');
+    const { data } = await instance.get('products');
     return data;
 }
 
