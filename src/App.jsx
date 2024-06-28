@@ -26,16 +26,16 @@ function App() {
 
     const navigate = useNavigate();
 
-    useEffect(() => {
-        (async () => {
-            try {
-                const { data } = await instance.get(`products`)
-                setProducts(data)
-            } catch (error) {
-                console.log(error)
-            }
-        })()
-    }, [])
+    // useEffect(() => {
+    //     (async () => {
+    //         try {
+    //             const { data } = await instance.get(`products`)
+    //             setProducts(data)
+    //         } catch (error) {
+    //             console.log(error)
+    //         }
+    //     })()
+    // }, [])
 
 
     // // Remove a record
@@ -104,7 +104,7 @@ function App() {
                 <Route path='/' element={<LayoutClient />} >
                     <Route index element={<HomePage />} />
                     <Route path='products' element={<Products />} />
-                    <Route path='products/:id' element={<DetailProduct />} />
+                    <Route path='products/:id' element={<DetailProduct />} /> 
                     <Route path='about' element={<AboutPage />} />
                     <Route path='contact' element={<ContactPage />} />
                 </Route>

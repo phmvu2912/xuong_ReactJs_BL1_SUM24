@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import styles from './ProductAdmin.module.scss'
 import instance from '../../../services/axios';
 import { useForm } from 'react-hook-form';
 import productSchema from '../../../schemaValid/productSchema';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { ProductContext } from '../../../contexts/ProductContext';
 
-const ProductForm = ({ onHandIn }) => {
+const ProductForm = () => {
+
+    const { state, dispatch } = useContext(ProductContext)
 
     const { id } = useParams();
 
@@ -32,8 +35,50 @@ const ProductForm = ({ onHandIn }) => {
         }, [])
     }
 
-    const onSubmit = (product) => {
-        onHandIn({...product, id})
+    const onSubmit = (data) => {
+        onHandleSubmit({ ...data, id })
+        // console.log(data)
+    }
+
+    const onHandleSubmit = async (product) => {
+        try {
+
+            if (product.id) {
+                // Call API
+                const { data, status } = await instance.put(`products/${product.id}`, product);
+
+                // Alert
+                // console.log(status)
+                if (status == 200) {
+                    alert('Cập nhật bản ghi thành công!');
+                } else {
+                    alert('Cập nhật bản ghi thất bại!');
+                }
+
+                // Rerender
+                dispatch({ type: 'UPDATE_PRODUCT', payload: data })
+            } else {
+                // Call API
+                const { data, status } = await instance.post(`products`, product);
+
+                // Alert
+                // console.log(status)
+                if (status == 201) {
+                    alert('Thêm mới bản ghi thành công!');
+                } else {
+                    alert('Thêm mới bản ghi thất bại!');
+                }
+
+                // Rerender
+                dispatch({ type: 'CREATE_PRODUCT', payload: data })
+            }
+
+            console.log(product)
+
+
+        } catch (error) {
+            console.error(error)
+        }
     }
 
     return (
