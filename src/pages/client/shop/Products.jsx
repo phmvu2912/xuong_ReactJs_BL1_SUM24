@@ -50,7 +50,7 @@ const Products = () => {
                             </div>
                         </div>
                         <div className={styles.title}>
-                            <Link to={''} className={styles.path}>{item.title}</Link>
+                            <Link to={`/products/${item.id}`} className={styles.path}>{item.title}</Link>
                         </div>
                         <div className={styles.info}>
                             <div className={styles.rating}>

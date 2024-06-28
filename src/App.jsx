@@ -114,8 +114,8 @@ function App() {
                     <Route element={<LayoutAdmin />} />
                     <Route index element={<Dashboard />} />
                     <Route path='products' element={<ProductsAdminPage />} />
-                    <Route path='products-submit' element={<ProductForm onHandIn={handleSubmit} />} />
-                    <Route path='products-submit/edit/:id' element={<ProductForm onHandIn={handleSubmit} />} />
+                    <Route path='products-submit' element={<ProductForm />} />
+                    <Route path='products-submit/edit/:id' element={<ProductForm />} />
                     <Route path='about' element={<AboutPage />} />
                     <Route path='contact' element={<ContactPage />} />
                 </Route>
